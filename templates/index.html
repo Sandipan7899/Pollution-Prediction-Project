@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AIR QUALITY INDEX PREDICTION</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='..//static/css/style.css') }}"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>AIR QUALITY INDEX PREDICTION</h1>
+			<form action="{{ url_for('predict') }}" method="post">
+				<div class="form_all">
+					<div class="form-group1">
+						<label for="pm25">PM2.5:</label>
+						<input type="number" id="pm25" name="pm25" required /><br />
+
+						<label for="pm10">PM10:</label>
+						<input type="number" id="pm10" name="pm10" required /><br />
+
+						<label for="no2">NO2:</label>
+						<input type="number" id="no2" name="no2" required /><br />
+
+						<label for="nox">NOx:</label>
+						<input type="number" id="nox" name="nox" required /><br />
+
+						<label for="co">CO:</label>
+						<input type="number" id="co" name="co" required /><br />
+
+						<label for="so2">SO2:</label>
+						<input type="number" id="so2" name="so2" required /><br />
+					</div>
+
+					<div class="form-group2">
+						<label for="o3">O3:</label>
+						<input type="number" id="o3" name="o3" required /><br />
+
+						<label for="temp">temp:</label>
+						<input type="number" id="temp" name="temp" required /><br />
+
+						<label for="humid">humid:</label>
+						<input type="number" id="humid" name="humid" required /><br />
+
+						<label for="visible">visible:</label>
+						<input type="number" id="visible" name="visible" required /><br />
+
+						<label for="wind">wind:</label>
+						<input type="number" id="wind" name="wind" required /><br />
+
+						<input type="submit" value="Predict" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
